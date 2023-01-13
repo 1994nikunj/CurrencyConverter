@@ -49,7 +49,7 @@ class CurrencyConvertor:
 
     def submit_action(self) -> None:
         conversion_rate = self.get_data()
-        result = '$ ' + str(round(((int(self.input_usd.get()) / conversion_rate) + int(self.input_bank.get())), 2))
+        result = '$ ' + str(round(((float(self.input_usd.get()) / conversion_rate) + float(self.input_bank.get())), 3))
         self.output.configure(text=result)
 
     @staticmethod
